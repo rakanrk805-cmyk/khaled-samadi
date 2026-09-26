@@ -1,110 +1,503 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="مؤسسة خالد صمادي التجارية - تجارة الزيوت والفلاتر ومستلزمات الآليات. سوريا، ريف دمشق.">
 <title>مؤسسة خالد صمادي التجارية</title>
+
 <style>
 * {
   box-sizing: border-box;
-}
-body {
   margin: 0;
-  font-family: Arial, Tahoma, sans-serif;
-  background: #111111;
-  color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: 0;
 }
-.container {
-  width: 100%;
-  max-width: 440px;
-  text-align: center;
-  background: #202020;
-  border: 2px solid #ffcc00;
-  border-radius: 22px;
-  padding: 30px 22px;
-  box-shadow: 0 0 25px #ffcc0030;
+
+html {
+  scroll-behavior: smooth;
 }
-.logo {
-  font-size: 42px;
-  margin-bottom: 12px;
-}
-h1 {
-  color: #ffcc00;
-  font-size: 25px;
-  line-height: 1.6;
-  margin: 0 0 10px;
-}
-p {
-  color: #dddddd;
-  font-size: 16px;
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: #111;
+  color: #fff;
   line-height: 1.8;
-  margin-bottom: 25px;
 }
+
+:root {
+  --yellow: #ffcc00;
+  --black: #111111;
+  --gray: #1e1e1e;
+  --light: #eeeeee;
+}
+
 a {
-  display: block;
   text-decoration: none;
-  background: #ffcc00;
-  color: #111111;
-  padding: 17px 12px;
-  margin: 13px 0;
-  border-radius: 12px;
-  font-size: 18px;
+  color: inherit;
+}
+
+header {
+  background: #111;
+  border-bottom: 3px solid var(--yellow);
+  padding: 18px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: var(--yellow);
+  font-size: 23px;
   font-weight: bold;
-  border: 2px solid #ffcc00;
+}
+
+nav a {
+  font-size: 14px;
+  margin: 0 8px;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+.hero {
+  min-height: 520px;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, #34300e 0%, #151515 60%, #111 100%);
+  border-bottom: 1px solid #333;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--yellow);
+  color: #111;
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 6vw, 55px);
+  color: var(--yellow);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #ddd;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: #111;
+  padding: 13px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 6px;
+  border: 2px solid var(--yellow);
   transition: 0.2s;
 }
-a:hover {
-  background: #111111;
-  color: #ffcc00;
+
+.btn:hover {
+  background: transparent;
+  color: var(--yellow);
 }
-.footer {
-  color: #aaaaaa;
-  font-size: 13px;
-  margin-top: 25px;
+
+.btn-outline {
+  background: transparent;
+  color: var(--yellow);
+}
+
+section {
+  padding: 70px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #bbb;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.products {
+  background: #181818;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #222;
+  border: 1px solid #393939;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--yellow);
+  transform: translateY(-5px);
+}
+
+.card .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: var(--yellow);
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.about-content {
+  max-width: 850px;
+  margin: auto;
+  background: #1d1d1d;
+  border-right: 5px solid var(--yellow);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.about-content p {
+  color: #ddd;
+  font-size: 17px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.feature strong {
+  color: var(--yellow);
+  display: block;
+  font-size: 18px;
+}
+
+.contact {
+  background: #1b1b1b;
+  text-align: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+  padding: 35px 20px;
+  border: 1px solid #444;
+  border-radius: 15px;
+  background: #222;
+}
+
+.contact-box h3 {
+  color: var(--yellow);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-box p {
+  color: #ddd;
+  margin-bottom: 12px;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  display: inline-block;
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 5px;
+}
+
+.social a:hover {
+  background: var(--yellow);
+  color: #111;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  background: #090909;
+  color: #aaa;
+  border-top: 2px solid var(--yellow);
+  font-size: 14px;
+}
+
+footer span {
+  color: var(--yellow);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px 12px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .brand {
+    width: 100%;
+    text-align: center;
+    font-size: 21px;
+  }
+
+  nav a {
+    font-size: 13px;
+    margin: 0 5px;
+  }
+
+  .hero {
+    min-height: 450px;
+    padding: 55px 15px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 50px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+  }
+
+  .about-content {
+    padding: 22px;
+  }
 }
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<header>
+  <nav>
+    <div class="brand">مؤسسة خالد صمادي التجارية</div>
+    <div>
+      <a href="#home">الرئيسية</a>
+      <a href="#products">منتجاتنا</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+  </nav>
+</header>
 
-  <div class="logo">⚙️</div>
+<main>
 
-  <h1>مؤسسة خالد صمادي التجارية</h1>
-
-  <p>
-    أهلاً وسهلاً بكم<br>
-    يسعدنا تواصلكم معنا ومتابعة صفحاتنا الرسمية
-  </p>
-
-  <a href="https://wa.me/message/M6D2WOUDFXU3K1">
-    تواصل معنا عبر واتساب
-  </a>
-
-  <a href="https://whatsapp.com/channel/0029Vb6QaoMK0IBjxlzIxB2h">
-    تابع قناة واتساب
-  </a>
-
-  <a href="https://www.facebook.com/share/1LmJFfQeC6/">
-    تابعنا على فيسبوك
-  </a>
-
-  <a href="https://www.instagram.com/khaled_samadi_trading.est?utm_source=qr&stkn=MTQ2bTRsYXg3NGRpcw==">
-    تابعنا على إنستغرام
-  </a>
-
-  <div class="footer">
-    مؤسسة خالد صمادي التجارية<br>
-    جميع الحقوق محفوظة
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">الجودة والثقة في كل منتج</div>
+    <h1>مؤسسة خالد صمادي التجارية</h1>
+    <p>
+      وجهتكم للزيوت والشحوم والفلاتر ومستلزمات الآليات
+      <br>
+      نهتم بالجودة ونحرص على تلبية احتياجاتكم.
+    </p>
+    <a class="btn"
+       href="https://wa.me/963997935814">
+       تواصل معنا عبر واتساب
+    </a>
+    <a class="btn btn-outline" href="#products">
+      اكتشف منتجاتنا
+    </a>
   </div>
+</section>
 
-</div>
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-title">
+      <h2>منتجاتنا وخدماتنا</h2>
+      <p>حلول متنوعة لتلبية احتياجات السيارات والشاحنات والآليات</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🛢️</div>
+        <h3>زيوت المحركات</h3>
+        <p>
+          زيوت محركات السيارات والشاحنات والآليات،
+          بمختلف درجات اللزوجة والاستخدامات.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>الزيوت الصناعية</h3>
+        <p>
+          زيوت هيدروليك وزيوت تروس وتشحيم،
+          لتلبية احتياجات المعدات والآليات.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔧</div>
+        <h3>الفلاتر</h3>
+        <p>
+          فلاتر زيت وهواء وديزل،
+          للسيارات والشاحنات والآليات.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚛</div>
+        <h3>مستلزمات الآليات</h3>
+        <p>
+          مستلزمات وقطع تبديل واحتياجات
+          السيارات والشاحنات والآليات.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>من نحن</h2>
+      <p>مؤسسة خالد صمادي التجارية</p>
+    </div>
+
+    <div class="about-content">
+      <p>
+        مؤسسة خالد صمادي التجارية هي مؤسسة متخصصة في تجارة
+        الزيوت والفلاتر ومستلزمات الآليات.
+        نسعى إلى توفير المنتجات التي تلبي احتياجات عملائنا
+        في قطاع السيارات والشاحنات والآليات، مع الاهتمام
+        بالجودة والخدمة والتعامل التجاري الموثوق.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <strong>الجودة</strong>
+          <span>منتجات تلبي احتياجاتكم</span>
+        </div>
+
+        <div class="feature">
+          <strong>الثقة</strong>
+          <span>تعامل تجاري موثوق</span>
+        </div>
+
+        <div class="feature">
+          <strong>التنوع</strong>
+          <span>مجموعة من المنتجات</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>تواصل معنا</h2>
+      <p>يسعدنا استقبال استفساراتكم وطلباتكم</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>مؤسسة خالد صمادي التجارية</h3>
+
+      <p>📍 سوريا - ريف دمشق</p>
+
+      <p>📞 +963 997 935 814</p>
+
+      <a class="btn"
+         href="https://wa.me/963997935814">
+         مراسلتنا على واتساب
+      </a>
+
+      <div class="social">
+
+        <a href="https://www.facebook.com/share/1LmJFfQeC6/"
+           target="_blank" rel="noopener">
+          فيسبوك
+        </a>
+
+        <a href="https://www.instagram.com/khaled_samadi_trading.est/"
+           target="_blank" rel="noopener">
+          إنستغرام
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb6QaoMK0IBjxlzIxB2h"
+           target="_blank" rel="noopener">
+          قناة واتساب
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 <span>مؤسسة خالد صمادي التجارية</span>
+  - جميع الحقوق محفوظة
+</footer>
 
 </body>
 </html>
